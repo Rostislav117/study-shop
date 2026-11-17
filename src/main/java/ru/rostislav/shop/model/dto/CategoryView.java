@@ -1,6 +1,6 @@
-package ru.rostislav.shop.dto;
+package ru.rostislav.shop.model.dto;
 
-import ru.rostislav.shop.domain.Category;
+import ru.rostislav.shop.model.entity.Category;
 
 /**
  * Представление категории в HTTP-ответе.

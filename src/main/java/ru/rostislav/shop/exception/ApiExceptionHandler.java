@@ -1,4 +1,4 @@
-package ru.rostislav.shop.web;
+package ru.rostislav.shop.exception;
 
 import java.util.List;
 
@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.HandlerMethodValidationException;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
-import ru.rostislav.shop.error.ResourceNotFoundException;
-import ru.rostislav.shop.error.ShopException;
-import ru.rostislav.shop.error.StockConflictException;
+import ru.rostislav.shop.model.dto.ApiError;
 
 /** Преобразует известные ошибки API в статус HTTP и понятный JSON. */
 @RestControllerAdvice

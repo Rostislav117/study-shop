@@ -1,4 +1,4 @@
-package ru.rostislav.shop.domain;
+package ru.rostislav.shop.model.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

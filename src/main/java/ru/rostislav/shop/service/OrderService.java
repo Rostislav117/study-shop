@@ -6,12 +6,12 @@ import java.util.TreeMap;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ru.rostislav.shop.domain.Product;
-import ru.rostislav.shop.domain.PurchaseOrder;
-import ru.rostislav.shop.dto.OrderRequest;
-import ru.rostislav.shop.dto.OrderView;
-import ru.rostislav.shop.error.ResourceNotFoundException;
-import ru.rostislav.shop.error.StockConflictException;
+import ru.rostislav.shop.model.entity.Product;
+import ru.rostislav.shop.model.entity.PurchaseOrder;
+import ru.rostislav.shop.model.dto.OrderRequest;
+import ru.rostislav.shop.model.dto.OrderView;
+import ru.rostislav.shop.exception.ResourceNotFoundException;
+import ru.rostislav.shop.exception.StockConflictException;
 import ru.rostislav.shop.repository.OrderRepository;
 
 /** Оформление и чтение заказов с атомарным списанием остатков. */

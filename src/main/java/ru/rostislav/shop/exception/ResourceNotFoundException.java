@@ -1,4 +1,4 @@
-package ru.rostislav.shop.error;
+package ru.rostislav.shop.exception;
 
 /** Запрошенная запись отсутствует или недоступна в каталоге. */
 public final class ResourceNotFoundException extends ShopException {

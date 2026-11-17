@@ -107,24 +107,24 @@ curl -i -sS "$BASE/api/products" -H 'Content-Type: application/json' \
 | Файл или пакет | Ответственность |
 | --- | --- |
 | `ShopApplication` | Запускает Spring Boot. Базовый пакет определяет область поиска компонентов и сущностей. |
-| `config/DemoData` | При старте новой БД в одной транзакции создаёт справочник и стартовые товары. Проверка справочника позволяет сохранить изменения между запусками. |
-| `web/CategoryController` | Даёт HTTP-доступ к справочнику. |
-| `web/ProductController` | Принимает параметры поиска, ID и данные CRUD, формирует статусы и `Location`. |
-| `web/OrderController` | Принимает оформление заказа и выдаёт заказ по ID. |
-| `web/ApiExceptionHandler`, `ApiError` | Преобразуют ошибки предметной области, валидации и чтения JSON в HTTP-ответы. |
+| `service/DemoData` | При старте новой БД в одной транзакции создаёт справочник и стартовые товары. Проверка справочника позволяет сохранить изменения между запусками. |
+| `controller/CategoryController` | Даёт HTTP-доступ к справочнику. |
+| `controller/ProductController` | Принимает параметры поиска, ID и данные CRUD, формирует статусы и `Location`. |
+| `controller/OrderController` | Принимает оформление заказа и выдаёт заказ по ID. |
+| `exception/ApiExceptionHandler`, `model/dto/ApiError` | Преобразуют ошибки предметной области, валидации и чтения JSON в HTTP-ответы. |
 | `service/CategoryService` | Получает категории и превращает их в DTO. |
 | `service/ProductService` | Выполняет поиск и CRUD каталога. Проверяет категорию, доступность товара и получает блокировку на запись. |
 | `service/OrderService` | Сводит количества по ID, списывает остатки, сохраняет заказ и возвращает итог. |
 | `repository/CategoryRepository`, `OrderRepository` | Используют стандартные JPA-операции поиска и сохранения. |
 | `repository/ProductRepository` | Читает активный каталог с категориями, блокирует строку товара перед изменением. |
-| `domain/Category` | Хранит идентификатор и название справочной категории. |
-| `domain/Product` | Хранит цену, остаток, категорию и признак архива. Управляет списанием и изменением каталожных полей. |
-| `domain/PurchaseOrder` | Хранит покупателя, момент оформления и позиции. Добавляет позиции и рассчитывает сумму. |
-| `domain/OrderLine` | Хранит ссылку на товар и заказ, количество, снимки названия и цены. Считает стоимость позиции. |
-| `dto/ProductData`, `StockUpdate`, `OrderRequest` | Описывают и проверяют поля входных запросов. |
-| `dto/CategoryView`, `ProductView`, `OrderView` | Описывают JSON-ответы, преобразуют сущности и позиции в данные для клиента. |
-| `error/ShopException`, `ResourceNotFoundException`, `StockConflictException` | Описывают ожидаемые ошибки, их код и пояснение. |
-| `src/main/resources/application.properties` | Настраивает локальный сервер, файловую H2, Hibernate и чтение JSON. |
+| `model/entity/Category` | Хранит идентификатор и название справочной категории. |
+| `model/entity/Product` | Хранит цену, остаток, категорию и признак архива. Управляет списанием и изменением каталожных полей. |
+| `model/entity/PurchaseOrder` | Хранит покупателя, момент оформления и позиции. Добавляет позиции и рассчитывает сумму. |
+| `model/entity/OrderLine` | Хранит ссылку на товар и заказ, количество, снимки названия и цены. Считает стоимость позиции. |
+| `model/dto/ProductData`, `StockUpdate`, `OrderRequest` | Описывают и проверяют поля входных запросов. |
+| `model/dto/CategoryView`, `ProductView`, `OrderView` | Описывают JSON-ответы, преобразуют сущности и позиции в данные для клиента. |
+| `exception/ShopException`, `ResourceNotFoundException`, `StockConflictException` | Описывают ожидаемые ошибки, их код и пояснение. |
+| `src/main/resources/application.yaml` | Настраивает локальный сервер, файловую H2, Hibernate и чтение JSON. |
 | `src/test/java/ru/rostislav/shop/ShopApiTest.java` | Проверяет API через MockMvc с настоящей H2 в памяти. |
 | `pom.xml` | Задаёт зависимости, версию языка и сборку исполняемого JAR. |
 | `docs/Защита проекта.docx` | Содержит ответы на все 11 вопросов с примерами из кода. |

@@ -1,4 +1,4 @@
-package ru.rostislav.shop.web;
+package ru.rostislav.shop.controller;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ru.rostislav.shop.dto.CategoryView;
+import ru.rostislav.shop.model.dto.CategoryView;
 import ru.rostislav.shop.service.CategoryService;
 
 /** HTTP-интерфейс справочника категорий. */

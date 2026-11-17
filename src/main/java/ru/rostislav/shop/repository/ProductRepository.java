@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import ru.rostislav.shop.domain.Product;
+import ru.rostislav.shop.model.entity.Product;
 
 /** Запросы каталога и блокировка товара для операций записи. */
 public interface ProductRepository extends JpaRepository<Product, Long> {

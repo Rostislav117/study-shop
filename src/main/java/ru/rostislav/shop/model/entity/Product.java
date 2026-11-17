@@ -1,4 +1,4 @@
-package ru.rostislav.shop.domain;
+package ru.rostislav.shop.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
 
-import ru.rostislav.shop.error.StockConflictException;
+import ru.rostislav.shop.exception.StockConflictException;
 
 /** Товар каталога с ценой в рублях, остатком и признаком архивации. */
 @Entity

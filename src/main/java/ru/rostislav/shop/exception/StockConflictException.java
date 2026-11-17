@@ -1,4 +1,4 @@
-package ru.rostislav.shop.error;
+package ru.rostislav.shop.exception;
 
 /** Оформление заказа конфликтует с текущим остатком товара. */
 public final class StockConflictException extends ShopException {

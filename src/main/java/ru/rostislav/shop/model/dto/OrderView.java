@@ -1,11 +1,11 @@
-package ru.rostislav.shop.dto;
+package ru.rostislav.shop.model.dto;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
 
-import ru.rostislav.shop.domain.OrderLine;
-import ru.rostislav.shop.domain.PurchaseOrder;
+import ru.rostislav.shop.model.entity.OrderLine;
+import ru.rostislav.shop.model.entity.PurchaseOrder;
 
 /**
  * Заказ с рассчитанной суммой и зафиксированными реквизитами позиций.

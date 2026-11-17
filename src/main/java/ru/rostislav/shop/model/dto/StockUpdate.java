@@ -1,4 +1,4 @@
-package ru.rostislav.shop.dto;
+package ru.rostislav.shop.model.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

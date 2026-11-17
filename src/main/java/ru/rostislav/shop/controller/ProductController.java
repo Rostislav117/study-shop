@@ -1,4 +1,4 @@
-package ru.rostislav.shop.web;
+package ru.rostislav.shop.controller;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import ru.rostislav.shop.dto.ProductData;
-import ru.rostislav.shop.dto.ProductView;
-import ru.rostislav.shop.dto.StockUpdate;
+import ru.rostislav.shop.model.dto.ProductData;
+import ru.rostislav.shop.model.dto.ProductView;
+import ru.rostislav.shop.model.dto.StockUpdate;
 import ru.rostislav.shop.service.ProductService;
 
 /** HTTP-интерфейс каталога и операций управления товаром. */
@@ -29,11 +29,6 @@ import ru.rostislav.shop.service.ProductService;
 public class ProductController {
     private final ProductService products;
 
-    /**
-     * Получает сервис каталога от Spring.
-     *
-     * @param products сервис товаров
-     */
     public ProductController(ProductService products) {
         this.products = products;
     }

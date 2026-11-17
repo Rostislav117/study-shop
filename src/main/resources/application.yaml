@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: shop-java-study
+  datasource:
+    url: jdbc:h2:file:./data/shop
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+      accept-float-as-int: false
+
+server:
+  address: 127.0.0.1

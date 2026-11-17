@@ -6,11 +6,11 @@ import java.util.Locale;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ru.rostislav.shop.domain.Category;
-import ru.rostislav.shop.domain.Product;
-import ru.rostislav.shop.dto.ProductData;
-import ru.rostislav.shop.dto.ProductView;
-import ru.rostislav.shop.error.ResourceNotFoundException;
+import ru.rostislav.shop.model.entity.Category;
+import ru.rostislav.shop.model.entity.Product;
+import ru.rostislav.shop.model.dto.ProductData;
+import ru.rostislav.shop.model.dto.ProductView;
+import ru.rostislav.shop.exception.ResourceNotFoundException;
 import ru.rostislav.shop.repository.CategoryRepository;
 import ru.rostislav.shop.repository.ProductRepository;
 

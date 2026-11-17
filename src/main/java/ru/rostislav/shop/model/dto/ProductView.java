@@ -1,8 +1,8 @@
-package ru.rostislav.shop.dto;
+package ru.rostislav.shop.model.dto;
 
 import java.math.BigDecimal;
 
-import ru.rostislav.shop.domain.Product;
+import ru.rostislav.shop.model.entity.Product;
 
 /**
  * Представление товара в каталоге.

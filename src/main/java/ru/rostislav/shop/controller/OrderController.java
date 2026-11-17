@@ -1,4 +1,4 @@
-package ru.rostislav.shop.web;
+package ru.rostislav.shop.controller;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Positive;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ru.rostislav.shop.dto.OrderRequest;
-import ru.rostislav.shop.dto.OrderView;
+import ru.rostislav.shop.model.dto.OrderRequest;
+import ru.rostislav.shop.model.dto.OrderView;
 import ru.rostislav.shop.service.OrderService;
 
 /** HTTP-интерфейс оформления и просмотра заказов. */

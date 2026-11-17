@@ -1,4 +1,4 @@
-package ru.rostislav.shop.web;
+package ru.rostislav.shop.model.dto;
 
 import java.util.List;
 

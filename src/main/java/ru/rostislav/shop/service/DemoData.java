@@ -1,4 +1,4 @@
-package ru.rostislav.shop.config;
+package ru.rostislav.shop.service;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import ru.rostislav.shop.domain.Category;
-import ru.rostislav.shop.domain.Product;
+import ru.rostislav.shop.model.entity.Category;
+import ru.rostislav.shop.model.entity.Product;
 import ru.rostislav.shop.repository.CategoryRepository;
 import ru.rostislav.shop.repository.ProductRepository;
 

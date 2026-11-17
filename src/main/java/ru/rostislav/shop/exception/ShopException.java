@@ -1,4 +1,4 @@
-package ru.rostislav.shop.error;
+package ru.rostislav.shop.exception;
 
 /** Базовое непроверяемое исключение для ожидаемых ошибок предметной области. */
 public abstract class ShopException extends RuntimeException {
